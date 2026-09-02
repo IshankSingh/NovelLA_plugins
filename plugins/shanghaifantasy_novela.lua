@@ -1,6 +1,6 @@
 id       = "shanghaifantasy"
 name     = "Shanghai Fantasy"
-version  = "1.0.0"
+version  = "1.0.1"
 baseUrl  = "https://shanghaifantasy.com"
 language = "en"
 
@@ -18,7 +18,7 @@ end
 
 local function fetch(url)
   local r = http_get(url)
-  if r.success then return r end
+  if r and r.success then return r end
   return nil
 end
 
@@ -82,8 +82,8 @@ end
 function getBookDescription(bookUrl)
   local r = fetch(bookUrl)
   if not r then return "" end
-  local el = html_select_first(r.body, "div[x-show="activeTab==='Synopsis'"]")
-  if not el then el = html_select_first(r.body, "div[x-show=activeTab=='Synopsis']") end
+  local el = html_select_first(r.body, "div[x-show='activeTab===\"Synopsis\"']")
+  if not el then el = html_select_first(r.body, "div[x-show='activeTab==\"Synopsis\"']") end
   return el and string_trim(el.text) or ""
 end
 
@@ -134,13 +134,11 @@ function getChapterList(bookUrl)
   return chapters
 end
 
-function getChapterText(html, url)
-  local content = html_select_first(html, "div.contenta")
-  if not content then
-    local r = fetch(url)
-    if not r then return "" end
-    content = html_select_first(r.body, "div.contenta")
-  end
+function getChapterText(url)
+  local r = fetch(url)
+  if not r then return "" end
+  
+  local content = html_select_first(r.body, "div.contenta")
   if not content then return "" end
 
   local cleaned = html_remove(content.html, "script")
