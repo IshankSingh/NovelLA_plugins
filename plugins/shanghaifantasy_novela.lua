@@ -108,7 +108,7 @@ function getChapterList(bookUrl)
 
   local chapters = {}
   local page = 1
-  local perPage = 5000
+  local perPage = 100
 
   while true do
     local url = baseUrl .. "/wp-json/fiction/v1/chapters?category=" ..
