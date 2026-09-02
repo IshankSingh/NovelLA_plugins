@@ -1,0 +1,9 @@
+language: "en"
+name: "English"
+sources:
+  - id: "shanghaifantasy"
+    name: "ShanghaiFantasy"
+    version: "1.0.0"
+    url: "https://github.com/IshankSingh/NovelLA_plugins/blob/main/plugins/shanghaifantasy_novela.lua"
+    icon: "https://..."
+    language: "en"
