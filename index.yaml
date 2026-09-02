@@ -1,0 +1,4 @@
+languages:
+  en:
+    name: "English"
+    url: "https://raw.githubusercontent.com/IshankSingh/NovelLA_plugins/main/en/index.yaml"
