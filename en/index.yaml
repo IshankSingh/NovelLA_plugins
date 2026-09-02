@@ -5,4 +5,5 @@ sources:
     name: "ShanghaiFantasy"
     version: "1.0.0"
     url: "https://raw.githubusercontent.com/IshankSingh/NovelLA_plugins/main/plugins/shanghaifantasy_novela.lua"
+    icon: "https://raw.githubusercontent.com/HnDK0/external-sources/main/icons/novelfire.png"
     language: "en"
