@@ -4,6 +4,6 @@ sources:
   - id: "shanghaifantasy"
     name: "ShanghaiFantasy"
     version: "1.0.0"
-    url: "https://github.com/IshankSingh/NovelLA_plugins/blob/main/plugins/shanghaifantasy_novela.lua"
+    url: "https://raw.githubusercontent.com/IshankSingh/NovelLA_plugins/main/plugins/shanghaifantasy_novela.lua"
     icon: "https://..."
     language: "en"
